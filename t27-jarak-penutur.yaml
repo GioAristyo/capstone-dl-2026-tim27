@@ -1,0 +1,52 @@
+# Rencana eksperimen tim 27: Taksiran jarak penutur dari suara
+# Label: Desain: tanda jarak di lantai
+tim: 27
+judul: Taksiran jarak penutur dari suara
+pembimbing: Ardika Satria
+pilar: Suara
+seed: 1027
+ulangan: 3
+durasi_kondisi_detik: 2.5
+jeda_detik: 0.5
+rekam:
+  audio:
+    aktif: true
+    sample_rate: 16000
+  kamera:
+    aktif: false
+faktor:
+  jarak:
+    jenis: manual
+    taraf:
+      - 1 m
+      - 2 m
+      - 3 m
+    instruksi: Penutur berdiri di tanda {taraf}
+  partisipan:
+    jenis: manual
+    taraf:
+      - P01
+      - P02
+      - P03
+      - P04
+      - P05
+    instruksi: Partisipan {taraf} siap di posisi (formulir persetujuan sudah ditandatangani)
+  kata:
+    jenis: isyarat
+    taraf:
+      - nyalakan
+      - matikan
+      - kipas
+      - lampu
+      - berhenti
+    instruksi: 'Ucapkan: {taraf}'
+metode:
+  jenis_tugas: Klasifikasi 3 jarak
+  masukan_model: Log-mel 64 pita, 1 s
+  metrik_utama: F1-makro
+  jalur:
+    - CNN
+    - TL
+    - Transformer
+    - AE
+  pembanding_non_dl: MFCC rata-rata dan simpangan + Random Forest/SVM
