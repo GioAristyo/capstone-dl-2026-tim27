@@ -9,11 +9,15 @@ Aturan protokol Tim 27:
 from __future__ import annotations
 
 import csv
+import sys
 from pathlib import Path
 import numpy as np
 import scipy.io.wavfile as wav
 import torch
 import torchaudio.transforms as T
+
+AKAR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(AKAR))
 
 from src.common import manifest
 

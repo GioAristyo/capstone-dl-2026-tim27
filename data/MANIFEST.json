@@ -1,5 +1,5 @@
 {
-  "sumber": "https://… (tautan dataset dari kartu Kasus tim di Workbench)",
-  "berkas": ["data/latih.csv"],
-  "catatan": "Isi pada Sprint 0: versi/tanggal unduh, jumlah baris, dan perubahan (bila ada). Berkas data sendiri tidak di-commit."
+  "sumber": "https://github.com/sains-data/capstone-dl-2026-starter",
+  "berkas": ["data/label.csv"],
+  "catatan": "Data sesi simulasi Tim 27: 225 kondisi (15 blok x 15 kondisi, 16 kHz)"
 }
